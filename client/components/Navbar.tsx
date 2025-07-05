@@ -2,8 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation();
-
-  const isActive = (path: string) => location.pathname === path;
+  const currentPath = location.pathname;
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,6 +10,14 @@ export default function Navbar() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Minimal navbar for specific project pages
+  const projectPages = [
+    "/project/banavo",
+    "/project/chemflow",
+    "/project/chemflow-landing",
+  ];
+  const isMinimalNavbar = projectPages.includes(currentPath);
 
   return (
     <nav className="flex justify-between items-center px-6 lg:px-24 py-4 bg-portfolio-background">
@@ -28,24 +35,30 @@ export default function Navbar() {
         >
           Home
         </button>
-        <button
-          onClick={() => scrollToSection("about")}
-          className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
-        >
-          About Me
-        </button>
+
         <button
           onClick={() => scrollToSection("work")}
           className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
         >
           Work
         </button>
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
-        >
-          Contact
-        </button>
+
+        {!isMinimalNavbar && (
+          <>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
+            >
+              About Me
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
+            >
+              Contact
+            </button>
+          </>
+        )}
       </div>
     </nav>
   );
