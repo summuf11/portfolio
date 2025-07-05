@@ -9,8 +9,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  build: {
-    outDir: "dist/spa",
+ build: {
+    outDir: "dist", // ✅ this is the key change
   },
   plugins: [react(), expressPlugin()],
   resolve: {
