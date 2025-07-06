@@ -30,9 +30,10 @@ export default function Index() {
               <h1 className="text-4xl sm:text-6xl lg:text-8xl font-poppins font-bold text-portfolio-dark leading-tight tracking-wider">
                 UI & UX
               </h1>
-              <h1 className="text-4xl sm:text-6xl lg:text-8xl font-poppins font-bold text-portfolio-dark leading-tight tracking-wider lg:text-right">
-                Designer
-              </h1>
+          <h1 className="text-4xl sm:text-6xl lg:text-8xl font-poppins font-bold text-portfolio-dark leading-tight tracking-wider ml-[45px] sm:ml-[65px] lg:ml-[105px]">
+  Designer
+</h1>
+
             </div>
 
             <p className="text-base sm:text-lg lg:text-xl font-poppins text-black tracking-wide max-w-xl mx-auto lg:mx-0 text-justify">
@@ -41,13 +42,14 @@ export default function Index() {
           </div>
 
           {/* Right Image */}
-          <div className="w-full sm:w-80 lg:w-96">
-            <img
-              src={img}
-              alt="Summaiya Fatima"
-              className="w-full h-auto object-contain rounded-lg"
-            />
-          </div>
+        <div className="w-80 h-[350px] lg:w-[500px] lg:h-[500px]">
+  <img
+    src={img}
+    alt="Summaiya Fatima"
+    className="w-full h-full object-contain rounded-lg"
+  />
+</div>
+
         </div>
       </section>
 
@@ -170,20 +172,57 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-portfolio-primary py-6">
-        <div className="px-6 lg:px-24 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
-          <p className="text-white text-sm sm:text-base lg:text-lg font-poppins">
-            © 2023 Summaiya All Rights Reserved, Inc.
-          </p>
-          <div className="flex items-center gap-6">
-            <div className="w-12 h-12 bg-portfolio-primary bg-opacity-70 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white">
-              <svg className="w-5 h-4 fill-white" viewBox="0 0 20 16">
-                <path d="..." fill="white" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </footer>
+     <footer className="bg-portfolio-primary py-6">
+  <div className="px-6 lg:px-24 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
+    <p className="text-white text-sm sm:text-base lg:text-lg font-poppins">
+      © 2023 Summaiya All Rights Reserved, Inc.
+    </p>
+
+    <div className="flex items-center gap-6">
+      {/* Instagram Icon */}
+      <a
+        href="https://instagram.com/summuf_11"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-10 h-10 rounded-full flex items-center justify-center border border-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+
+      {/* Email Icon */}
+      <a
+        href="mailto:summaiyafatima854@gmail.com"
+        className="w-10 h-10 rounded-full flex items-center justify-center border border-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 4h16v16H4V4z" fill="none"/>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M22 6l-10 7L2 6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }

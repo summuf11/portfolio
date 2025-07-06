@@ -348,7 +348,7 @@ export default function ProjectChemFlowLanding() {
               to="/"
               className="text-lg lg:text-xl font-poppins text-portfolio-dark hover:text-portfolio-primary transition-colors tracking-wide"
             >
-              Home →
+           
             </Link>
           </div>
         </div>

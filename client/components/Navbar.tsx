@@ -11,7 +11,6 @@ export default function Navbar() {
     }
   };
 
-  // Minimal navbar for specific project pages
   const projectPages = [
     "/project/banavo",
     "/project/chemflow",
@@ -29,16 +28,27 @@ export default function Navbar() {
       </Link>
 
       <div className="flex items-center gap-3">
-        <button
-          onClick={() => scrollToSection("hero")}
-          className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-primary hover:text-portfolio-primary"
-        >
-          Home
-        </button>
+        {isMinimalNavbar ? (
+          <Link
+            to="/"
+            className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-black"
+          >
+            Home
+          </Link>
+        ) : (
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-primary hover:text-portfolio-primary"
+          >
+            Home
+          </button>
+        )}
 
         <button
           onClick={() => scrollToSection("work")}
-          className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
+          className={`px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors ${
+            isMinimalNavbar ? "text-[#A0522D]" : "text-portfolio-dark hover:text-portfolio-primary"
+          }`}
         >
           Work
         </button>
