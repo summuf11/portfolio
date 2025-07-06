@@ -139,33 +139,44 @@ export default function Index() {
                 I'm very approachable and would love to speak to you. Feel free to call, send me an email. Follow me on social media or simply complete the enquiry form.
               </p>
 
-              <div className="space-y-6">
-                {/* Email */}
-                <div className="flex items-start gap-4 justify-center sm:justify-start">
-                  <div className="w-10 h-10 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-4 fill-white" viewBox="0 0 20 16">
-                      <path d="..." />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <p className="text-lg sm:text-xl font-semibold text-white">Email</p>
-                    <p className="text-sm sm:text-base text-portfolio-light">summaiyafatima854@gmail.com</p>
-                  </div>
-                </div>
+         <div className="space-y-6">
+  {/* Email */}
+  <div className="flex items-start gap-4 justify-center sm:justify-start">
+    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
+      <svg
+        className="w-5 h-5 stroke-white"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path d="M4 4h16c1.1 0 2 .9 2 2v0 12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Zm0 0 8 7 8-7" />
+      </svg>
+    </div>
+    <div className="text-left">
+      <p className="text-lg sm:text-xl font-semibold text-white">Email</p>
+      <p className="text-sm sm:text-base text-white">summaiyafatima854@gmail.com</p>
+    </div>
+  </div>
 
-                {/* Phone */}
-                <div className="flex items-start gap-4 justify-center sm:justify-start">
-                  <div className="w-10 h-10 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
-                      <path d="..." />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <p className="text-lg sm:text-xl font-semibold text-white">Phone</p>
-                    <p className="text-sm sm:text-base text-portfolio-light">9880473852</p>
-                  </div>
-                </div>
-              </div>
+  {/* Phone */}
+  <div className="flex items-start gap-4 justify-center sm:justify-start">
+    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
+      <svg
+        className="w-5 h-5 stroke-white"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.73 19.73 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12.35 12.35 0 0 0 .57 2.57 2 2 0 0 1-.45 2.11L9 10c1.5 2.6 3.4 4.5 6 6l.6-.6a2 2 0 0 1 2.11-.45 12.35 12.35 0 0 0 2.57.57A2 2 0 0 1 22 16.92Z" />
+      </svg>
+    </div>
+    <div className="text-left">
+      <p className="text-lg sm:text-xl font-semibold text-white">Phone</p>
+      <p className="text-sm sm:text-base text-white">9880473852</p>
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
