@@ -27,7 +27,8 @@ export default function Navbar() {
         SUMMAIYA
       </Link>
 
-      <div className="flex items-center gap-3">
+      {/* Navigation buttons hidden on small screens, shown on lg and above */}
+      <div className="hidden lg:flex items-center gap-3">
         {isMinimalNavbar ? (
           <Link
             to="/"
@@ -44,6 +45,15 @@ export default function Navbar() {
           </button>
         )}
 
+        {!isMinimalNavbar && (
+          <button
+            onClick={() => scrollToSection("about")}
+            className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
+          >
+            About Me
+          </button>
+        )}
+
         <button
           onClick={() => scrollToSection("work")}
           className={`px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors ${
@@ -54,20 +64,12 @@ export default function Navbar() {
         </button>
 
         {!isMinimalNavbar && (
-          <>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
-            >
-              About Me
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
-            >
-              Contact
-            </button>
-          </>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="px-4 py-2 text-lg lg:text-xl font-poppins tracking-wide transition-colors text-portfolio-dark hover:text-portfolio-primary"
+          >
+            Contact
+          </button>
         )}
       </div>
     </nav>
