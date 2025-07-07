@@ -141,8 +141,10 @@ export default function Index() {
 
          <div className="space-y-6">
   {/* Email */}
-  <div className="flex items-start gap-4 justify-center sm:justify-start">
-    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
+<div className="space-y-6">
+  {/* Email */}
+  <div className="flex items-start gap-4">
+    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center flex-shrink-0">
       <svg
         className="w-5 h-5 stroke-white"
         fill="none"
@@ -159,8 +161,8 @@ export default function Index() {
   </div>
 
   {/* Phone */}
-  <div className="flex items-start gap-4 justify-center sm:justify-start">
-    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
+  <div className="flex items-start gap-4">
+    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center flex-shrink-0">
       <svg
         className="w-5 h-5 stroke-white"
         fill="none"
@@ -175,6 +177,7 @@ export default function Index() {
       <p className="text-sm sm:text-base text-white">9880473852</p>
     </div>
   </div>
+</div>
 </div>
 
             </div>
